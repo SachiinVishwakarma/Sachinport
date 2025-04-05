@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-4 bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('./herobg.png')" }}>
+    <section className="w-full min-h-screen flex items-center justify-center px-4 bg-fixed bg-cover bg-center">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl w-full gap-14">
 
         {/* Left Side */}
