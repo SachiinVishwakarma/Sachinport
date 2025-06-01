@@ -38,7 +38,7 @@ const ProjectCard = ({ project, index }) => (
     className="bg-white/5 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-white/10 hover:-translate-y-2 transition duration-300 flex flex-col"
   >
     <div className="relative">
-      <img src="/api/placeholder/400/200" alt={project.title} className="w-full h-48 object-cover brightness-90" />
+      <img src={project.image} alt={project.title} className="w-full h-48 object-cover brightness-90" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#14142b]" />
       <span
         className="absolute top-4 right-4 px-2 py-1 text-xs font-bold rounded border text-white"
@@ -63,15 +63,32 @@ const ProjectCard = ({ project, index }) => (
         ))}
       </div>
     </div>
-    <div className="p-4 pt-0">
-      <motion.a
-        href="#"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="inline-flex items-center gap-2 px-4 py-2 rounded bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-md relative overflow-hidden"
-      >
-        <FaGithub /> View
-      </motion.a>
+    <div className="p-4 pt-0 flex gap-40">
+      {project.sourceCodeLink && (
+        <motion.a
+          href={project.sourceCodeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-md relative overflow-hidden"
+        >
+          <FaGithub /> View
+        </motion.a>
+      )}
+
+      {project.liveLink && (
+        <motion.a
+          href={project.liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-md relative overflow-hidden"
+        >
+          🚀 Visit
+        </motion.a>
+      )}
     </div>
   </motion.div>
 );
@@ -81,31 +98,44 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: 'Academic ERP',
-      description:
-        'An all-in-one Student Management system for managing students, courses, and attendance.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT Authentication'],
-      category: 'web',
-      gradient: { start: '#FF3CAC', end: '#784BA0' },
+      title: "Funfinity",
+      description: "Funfinity is a vibrant game hub...",
+      technologies: ["React", "Vite", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
+      category: "web",
+      gradient: { start: "#FF7E5F", end: "#FEB47B" },
+      shadowColor: "255, 126, 95",
+      sourceCodeLink: "https://github.com/SachiinVishwakarma/GameHub.git",
+      liveLink: "https://fun-finity.vercel.app",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQshEJ3YrLSxbWOf7563r7I3na3arHXjnDkBw&s",
     },
     {
-      title: 'Research on Common Sense Knowledge',
-      description: 'A research project focused on integrating common sense reasoning into AI systems.',
-      technologies: ['Python', 'Machine Learning', 'NLP', 'TensorFlow', 'Data Analysis'],
-      category: 'research',
-      gradient: { start: '#4E65FF', end: '#92EFFD' },
+      title: "Academic ERP",
+      description: "An all-in-one Student Management system...",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "JWT Authentication"],
+      category: "web",
+      gradient: { start: "#FF3CAC", end: "#784BA0" },
+      image: "https://cdn.libsys.co.in/fetch/15/1/CONTENT/BACKGROUND/Academic%20Campus%20ERP_1683790130843.jpg", // <-- New image path
+    },
+    {
+      title: "Research on Common Sense Knowledge",
+      description: "A research project focused on common sense reasoning in AI.",
+      technologies: ["Python", "Machine Learning", "NLP", "TensorFlow", "Data Analysis"],
+      category: "research",
+      gradient: { start: "#4E65FF", end: "#92EFFD" },
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMheEmdQGdDgE3tIsZHc1dHCq-ayxrKEmzXQ&s", // <-- New image path
     },
   ];
+
 
   const filteredProjects =
     tab === 0
       ? projects
       : projects.filter((p) => {
-          if (tab === 1) return p.category === 'web';
-          if (tab === 2) return p.category === 'mobile';
-          if (tab === 3) return p.category === 'research';
-          return true;
-        });
+        if (tab === 1) return p.category === 'web';
+        if (tab === 2) return p.category === 'mobile';
+        if (tab === 3) return p.category === 'research';
+        return true;
+      });
 
   return (
     <section id="projects" className="py-16 min-h-screen text-white">
