@@ -5,7 +5,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import coding from '/me.jpg'
 const socialLinks = {
   github: "https://github.com/SachiinVishwakarma",
-  linkedin: "https://www.linkedin.com/insachin-vishwakarma-907a282a4",
+  linkedin: "https://www.linkedin.com/in/sachinvishwakarma193",
   instagram: "https://www.instagram.com/sachin_vishw_"
 };
 

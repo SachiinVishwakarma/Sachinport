@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const socialLinks = {
   github: "https://github.com/SachiinVishwakarma",
-  linkedin: "https://www.linkedin.com/in/sachin-vishwakarma-907a282a4",
+  linkedin: "https://www.linkedin.com/in/sachinvishwakarma193",
   instagram: "https://www.instagram.com/sachin_vishw_"
 };
 

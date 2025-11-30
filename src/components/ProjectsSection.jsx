@@ -89,6 +89,17 @@ const ProjectCard = ({ project, index }) => (
           🚀 Visit
         </motion.a>
       )}
+      {project.downloadLink && (
+        <motion.a
+          href={project.downloadLink}
+          download
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-md"
+        >
+          📥 Download APK
+        </motion.a>
+      )}
     </div>
   </motion.div>
 );
@@ -97,6 +108,16 @@ const ProjectsSection = () => {
   const [tab, setTab] = useState(0);
 
   const projects = [
+    {
+      title: "KriyaHub",
+      description: "A task manager with a friendly interface for quick reminders and check-offs.",
+      technologies: ["React Native", "JavaScript"],
+      category: "mobile",
+      gradient: { start: "#00C9FF", end: "#92FE9D" },
+      image: "./kriyahub.png",
+
+      downloadLink: "/kriyahub.apk",
+    },
     {
       title: "Funfinity",
       description: "Funfinity is a vibrant game hub...",
@@ -124,6 +145,8 @@ const ProjectsSection = () => {
       gradient: { start: "#4E65FF", end: "#92EFFD" },
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMheEmdQGdDgE3tIsZHc1dHCq-ayxrKEmzXQ&s", // <-- New image path
     },
+
+
   ];
 
 

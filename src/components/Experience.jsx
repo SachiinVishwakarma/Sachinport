@@ -11,11 +11,20 @@ const experiences = [
   {
     company: "Eimple Labs",
     role: "Backend Developer Intern",
-    duration: "2024 - Present",
+    duration: "2K24 - Present",
     description:
       "Designed and optimized RESTful APIs, implemented authentication, and enhanced database performance for scalable applications.",
     icon: <FaCode className="text-white" />,
     iconBg: "#915EFF",
+  },
+  {
+    company: "Eimple Labs",
+    role: "Frontend Developer Intern",
+    duration: "2K25",
+    description:
+      "Created a fast, responsive React interface with clean design and smooth interactions.",
+    icon: <FaCode className="text-white" />,
+    iconBg: "#5308f5ff",
   },
 ];
 
@@ -51,9 +60,9 @@ const Experience = () => {
                   {exp.duration}
                 </span>
               }
-              
-              
-              
+
+
+
               iconStyle={{
                 background: exp.iconBg,
                 color: "#fff",
