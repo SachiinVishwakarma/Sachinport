@@ -11,7 +11,7 @@ const experiences = [
   {
     company: "Eimple Labs",
     role: "Backend Developer Intern",
-    duration: "2K24 - Present",
+    duration: "2K24",
     description:
       "Designed and optimized RESTful APIs, implemented authentication, and enhanced database performance for scalable applications.",
     icon: <FaCode className="text-white" />,
@@ -26,6 +26,15 @@ const experiences = [
     icon: <FaCode className="text-white" />,
     iconBg: "#5308f5ff",
   },
+  {
+    company: "Project Leadership",
+    role: "Team Lead",
+    duration: "2k26",
+    description:
+      "Led a team of developers to design and deliver a full-stack project, coordinated tasks, managed timelines, and ensured high-quality implementation with efficient collaboration.",
+    icon: <FaCode className="text-white" />,
+    iconBg: "#22c55e",
+  }
 ];
 
 const Experience = () => {

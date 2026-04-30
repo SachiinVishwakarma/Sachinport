@@ -1,10 +1,10 @@
-const SegmentedCircle = ({ imageUrl }) => {
+const SegmentedCircle = ({ imageUrl, className = "" }) => {
   const segments = 36;
   const radius = 130;
   const center = 200;
 
   return (
-    <div className="relative w-[350px] h-[350px] md:w-[480px] md:h-[480px]">
+    <div className={`relative w-[350px] h-[350px] md:w-[480px] md:h-[480px] ${className}`}>
       <svg viewBox="0 0 400 400" className="w-full h-full">
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -51,6 +51,7 @@ const SegmentedCircle = ({ imageUrl }) => {
     max-w-[400px]
     object-contain
     z-10
+    drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)]
   "
       />
     </div>

@@ -27,6 +27,12 @@ module.exports = {
         "spin-slow": "spin 20s linear infinite",
         "spin-reverse": "spin 5s linear infinite reverse",
       },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
     },
   },
   plugins: [],
