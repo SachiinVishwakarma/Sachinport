@@ -52,7 +52,7 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center">
+        <div className="grid gap-10 items-center justify-center">
           {/* Optional left section can go here in future */}
 
           {/* Right form */}

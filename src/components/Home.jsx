@@ -2,7 +2,8 @@ import React from "react";
 import Type from "./Type.jsx";
 import { GitHub, LinkedIn, Instagram } from "@mui/icons-material";
 import DownloadIcon from "@mui/icons-material/Download";
-import coding from '/me.jpg'
+import coding from '/me.png'
+import SegmentedCircle from "./RotatingArc.jsx";
 const socialLinks = {
   github: "https://github.com/SachiinVishwakarma",
   linkedin: "https://www.linkedin.com/in/sachinvishwakarma193",
@@ -20,8 +21,8 @@ const Home = () => {
   };
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-4 bg-fixed bg-cover bg-center">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl w-full gap-14">
+    <section className="w-full min-h-screen flex items-center justify-center px-12 bg-fixed bg-cover bg-center">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl w-full gap-4">
 
         {/* Left Side */}
         <div className="text-white text-center md:text-left flex-1">
@@ -56,15 +57,11 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Side */}
-        <div className="flex-1 flex justify-center">
-          <img
-            src={coding}
-            alt="Coding"
-            className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[22rem] lg:h-[22rem] rounded-full object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </div>
+        <div className="relative flex justify-center items-center">
+          {/* Rotating Arc */}
+          <SegmentedCircle imageUrl={coding} />
 
+        </div>
 
 
       </div>

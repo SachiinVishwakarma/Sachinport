@@ -22,7 +22,7 @@ const Footer = () => {
         <div>
           <h2 className="text-2xl font-extrabold text-pink-500 mb-4">Contact</h2>
           <a
-            href="/contact"
+            href="#contact"
             className="text-gray-300 text-sm hover:text-pink-400 transition duration-300"
           >
             Get in touch →
